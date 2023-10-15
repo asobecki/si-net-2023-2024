@@ -29,4 +29,16 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+
+app.Use(async (context, next) =>
+{
+    await next();
+    if (context.Response.StatusCode == 404)
+    {
+        Console.WriteLine("Przechwyciłem 404");
+        context.Request.Path = "/second-controller/CatchThemAll";
+        await next();
+    }
+});
+
 app.Run();

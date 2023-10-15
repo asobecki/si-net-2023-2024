@@ -4,6 +4,7 @@ using w2routing.Models;
 
 namespace w2routing.Controllers;
 
+[Route("home")]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -13,11 +14,13 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [Route("/")]
     public IActionResult Index()
     {
         return View();
     }
 
+    [Route("privacy")]
     public IActionResult Privacy()
     {
         return View();
@@ -29,13 +32,13 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
-    [HttpGet("/testConstraint/{param1:minlength(4)}")]
+    [HttpGet("testConstraint/{param1:minlength(4)}")]
     public String TestIntConstraint(string param1)
     {
         return "Udało się. Przekazany parametr jest dłuższy niż 3 znaki.";
     }
 
-    [HttpGet("/testCustomConstraint/{par1:int}/{par2:evenint}")]
+    [HttpGet("testCustomConstraint/{par1:int}/{par2:evenint}")]
     public String TestCustomConstraint(int par1, int par2)
     {
 

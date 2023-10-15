@@ -1,0 +1,15 @@
+@model List<int>
+
+@{
+    ViewBag.Title = "Liczby pierwsze";
+    Layout = "_Layout";
+}
+
+<h2>Liczby pierwsze</h2>
+
+<div>
+    @foreach (var prime in Model)
+    {
+        <p>@prime</p>
+    }
+</div>
