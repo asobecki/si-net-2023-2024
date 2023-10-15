@@ -1,0 +1,14 @@
+{
+  "Additional": {
+    "Name": "John json",
+    "Surname": "Doe json"
+  },
+  "MyClass": {
+    "FirstParam": "true",
+    "SecondParam": {
+      "Parameter3": "some value",
+      "Parameter4": "other value",
+      "Parameter5": "broken value"
+    }
+  }
+}
