@@ -12,7 +12,9 @@ namespace w2routing.Controllers
             InitializeCatalog();
         }
 
-        // CRUD
+        // 1. CRUD
+        //
+        // 2. Potem dodanie walidacji po pokazaniu bindowania
 
         private void InitializeCatalog()
         {
