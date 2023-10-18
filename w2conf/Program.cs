@@ -3,7 +3,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 // builder.Configuration.AddIniFile($"custom.{builder.Environment.EnvironmentName}.ini", optional: true, reloadOnChange: false);
-builder.Configuration.AddJsonFile($"custom.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: false);
+// builder.Configuration.AddJsonFile($"custom.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: false);
 // builder.Configuration.AddXmlFile($"custom.{builder.Environment.EnvironmentName}.xml", optional: true, reloadOnChange: false);
 
 var app = builder.Build();
