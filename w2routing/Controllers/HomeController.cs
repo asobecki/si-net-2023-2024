@@ -17,6 +17,8 @@ public class HomeController : Controller
     [Route("/")]
     public IActionResult Index()
     {
+        ViewData["Klucz"] = "wartosc";
+        ViewBag.Klucz = 12312312;
         return View();
     }
 

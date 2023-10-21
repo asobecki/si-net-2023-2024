@@ -8,6 +8,7 @@ builder.Services.Configure<RouteOptions>(options =>
     {
         options.ConstraintMap.Add("evenint", typeof(MyEvenNumber));
     });
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

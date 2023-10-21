@@ -42,6 +42,14 @@ namespace w2routing.Controllers
             return View("TimeConsuming", await lazyFunction(limit));
         }
 
+        [HttpGet("test-cancel")]
+        public async Task<string> TestCancel(CancellationToken token)
+        {
+            await Task.Delay(10_000, token);
+            Console.WriteLine("Kiedy to się skonczylo;");
+            return "Cokolwiek";
+        }
+
 
         private async Task<List<int>> lazyFunction(int limit)
         {

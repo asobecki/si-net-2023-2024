@@ -1,0 +1,16 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "Testy bindowania";
+    Layout = "_Layout";
+}
+<h2>title</h2>
+
+<div>
+    <h1>Testy forularzy</h1>
+    <form asp-action="TestFromValueBinding" method="post"
+          >
+        <input type="text" name="email"/>
+        <input type="submit"/>
+    </form>
+</div>
